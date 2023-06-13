@@ -5,17 +5,14 @@ kyverno_args=()
 policies=()
 
 record_helm_args() {
-    echo "HELM ARG $@"
     helm_args=("${helm_args[@]}" "$@")
 }
 
 record_kyverno_args() {
-    echo "KYVERNO ARG $@"
     kyverno_args=("${kyverno_args[@]}" "$@")
 }
 
 record_policies() {
-    echo "POLICIES $@"
     policies=("${policies[@]}" "$@")
 }
 
