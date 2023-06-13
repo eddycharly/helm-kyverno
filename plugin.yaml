@@ -1,0 +1,6 @@
+name: "kyverno"
+version: "1.10.0"
+command: "$HELM_PLUGIN_DIR/bin/kyverno"
+hooks:
+  install: "cd $HELM_PLUGIN_DIR; scripts/install_plugin.sh"
+  update: "cd $HELM_PLUGIN_DIR; scripts/install_plugin.sh"
