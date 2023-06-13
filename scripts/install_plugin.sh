@@ -9,7 +9,7 @@ fi
 
 # shellcheck disable=SC2002
 version="$(cat plugin.yaml | grep "version" | cut -d '"' -f 2)"
-echo "Downloading and installing kyverno-cli v${version} ..."
+echo "Downloading and installing kyverno-cli ${version} ..."
 
 url=""
 if [ "$(uname)" = "Darwin" ]; then
@@ -31,7 +31,7 @@ fi
 echo "$url"
 
 mkdir -p "bin"
-mkdir -p "releases/v${version}"
+mkdir -p "releases/${version}"
 
 # Download with curl if possible.
 # shellcheck disable=SC2230
